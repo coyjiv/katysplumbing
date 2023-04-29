@@ -11,8 +11,23 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      display: ['Arimo', 'sans-serif'],
-      display: ['Rubik', 'sans-serif'],
+      display: ['Roboto', 'sans-serif'],
+      display: ['Roboto', 'sans-serif'],
+    },
+    colors: {
+      'darkBrown':{
+        100: '#392820',
+        200: '#382820'
+      },
+      'bg': '#413f54',
+      'ultraViolet': '#5f5aa2',
+      'brightViolet': '#9089F2',
+      'yinBlue': '#355691',
+      'onyx': '#3f4045',
+      'darkerThanBg': '#30292f',
+      'lightBrown':{
+        100: '#a67651',
+      }
     },
   },
   plugins: [require('@tailwindcss/forms')],

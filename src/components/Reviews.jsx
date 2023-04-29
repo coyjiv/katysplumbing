@@ -59,7 +59,7 @@ function classNames(...classes) {
 export default function Reviews() {
   return (
     <div id="reviews" className="bg-[#D4A96E] pt-20 pb-20">
-      <h1 className="text-center text-[#392820] lg:text-5xl text-3xl font-bold mb-12">
+      <h1 className="text-center text-darkBrown-100 lg:text-5xl text-3xl font-bold mb-12">
         Company Reviews
       </h1>
 
@@ -79,7 +79,7 @@ export default function Reviews() {
             >
               <div
                 key={review.id}
-                className="shadow-lg lg:shadow-none px-8 mt-6 lg:mt-0 lg:px-0 pb-10 lg:pb-0 rounded-3xl lg:rounded-none bg-amber-100/20 lg:bg-transparent flex sm:max-w-[80%] lg:max-w-full mx-auto lg:mx-0 flex-col lg:flex-row lg:space-x-4 text-sm text-[#392820]"
+                className="shadow-lg lg:shadow-none px-8 mt-6 lg:mt-0 lg:px-0 pb-10 lg:pb-0 rounded-3xl lg:rounded-none bg-amber-100/20 lg:bg-transparent flex sm:max-w-[80%] lg:max-w-full mx-auto lg:mx-0 flex-col lg:flex-row lg:space-x-4 text-sm text-darkBrown-100"
               >
                 <div className="flex-none py-5 lg:py-10">
                   <img
@@ -95,7 +95,7 @@ export default function Reviews() {
                     "flex-1 lg:py-10"
                   )}
                 >
-                  <h3 className="font-bold text-center lg:text-left text-[#392820] text-xl lg:text-lg">
+                  <h3 className="font-bold text-center lg:text-left text-darkBrown-100 text-xl lg:text-lg">
                     {review.author}
                   </h3>
                   <p>
@@ -119,7 +119,7 @@ export default function Reviews() {
                   <p className="sr-only">{review.rating} out of 5 stars</p>
 
                   <div
-                    className="text-center lg:text-left prose prose-sm mt-4 max-w-none text-[#392820] lg:text-base"
+                    className="text-center lg:text-left prose prose-sm mt-4 max-w-none text-darkBrown-100 lg:text-base"
                     dangerouslySetInnerHTML={{ __html: review.content }}
                   />
                 </div>

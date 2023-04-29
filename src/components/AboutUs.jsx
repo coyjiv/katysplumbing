@@ -4,7 +4,7 @@ export default function AboutUs() {
     // OnHover should move
 
     <div className='relative bg-[#221813] group' id='about-us'>
-      <div className='relative h-80 overflow-hidden bg-[#ebe0bf] md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2'>
+      <div className='relative h-80 overflow-hidden bg-bg md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2'>
         <picture>
           <source media='(max-width: 1023px)' srcSet='/about-us-bg-sm.jpg' />
           <source media='(min-width: 1024px)' srcSet='/about-us-bg.jpg' />

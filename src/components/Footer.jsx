@@ -62,7 +62,7 @@ export default function Footer() {
             <Link to={item.scroll} smooth={true} duration={500} key={i}>
               <div key={item.name} className="pb-6">
                 <p
-                  className="text-sm leading-6 text-white hover:text-[#a67651]"
+                  className="text-sm leading-6 text-white hover:text-lightBrown-100"
                 >
                   {item.name}
                 </p>
@@ -77,7 +77,7 @@ export default function Footer() {
               rel="noreferrer"
               key={item.name}
               href={item.href}
-              className="text-white hover:text-[#a67651] cursor-pointer"
+              className="text-white hover:text-lightBrown-100 cursor-pointer"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />

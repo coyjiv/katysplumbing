@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Text:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
 html,
@@ -29,7 +29,7 @@ a {
   }
   body {
     color: white;
-    background: black;
+    /* background: black; */
   }
 }
 

@@ -50,7 +50,7 @@ export const ApplyForm = () => {
   });
   return (
     <div className="bg-[#D4A96E] pt-20">
-      <h1 className="text-center text-[#392820] text-3xl mb-10 lg:text-5xl font-bold lg:mb-20">
+      <h1 className="text-center text-darkBrown-100 text-3xl mb-10 lg:text-5xl font-bold lg:mb-20">
         Client application
       </h1>
 
@@ -66,7 +66,7 @@ export const ApplyForm = () => {
           <div className="rounded-md px-3 pt-2.5 pb-1.5 mb-4 lg:mb-0 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-1/2">
             <label
               htmlFor="name"
-              className="block text-xs font-medium text-[#392820]"
+              className="block text-xs font-medium text-darkBrown-100"
             >
               First Name *
             </label>
@@ -92,7 +92,7 @@ export const ApplyForm = () => {
           <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f]  lg:w-1/2 mb-4 lg:mb-0">
             <label
               htmlFor="surname"
-              className="block text-xs font-medium text-[#392820]"
+              className="block text-xs font-medium text-darkBrown-100"
             >
               Last Name *
             </label>
@@ -118,7 +118,7 @@ export const ApplyForm = () => {
         <div className=" rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-2/3 lg:mt-4 w-4/5  ">
           <label
             htmlFor="email"
-            className="block text-xs font-medium text-[#392820]"
+            className="block text-xs font-medium text-darkBrown-100"
           >
             Email *
           </label>
@@ -146,7 +146,7 @@ export const ApplyForm = () => {
         <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-2/3 mt-4 w-4/5  ">
           <label
             htmlFor="companyname"
-            className="block text-xs font-medium text-[#392820]"
+            className="block text-xs font-medium text-darkBrown-100"
           >
             Company name (optional)
           </label>
@@ -168,7 +168,7 @@ export const ApplyForm = () => {
         <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-2/3 mt-4 w-4/5  ">
           <label
             htmlFor="license"
-            className="block text-xs font-medium text-[#392820]"
+            className="block text-xs font-medium text-darkBrown-100"
           >
             License number (optional)
           </label>
@@ -207,7 +207,7 @@ export const ApplyForm = () => {
         <div className=" rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-2/3 lg:mt-4 w-4/5  ">
           <label
             htmlFor="email"
-            className="block text-xs font-medium text-[#392820]"
+            className="block text-xs font-medium text-darkBrown-100"
           >
             Phone number *
           </label>
@@ -235,7 +235,7 @@ export const ApplyForm = () => {
         <div className=" rounded-md px-3 mt-4 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-2/3 lg:mt-4 w-4/5  ">
           <label
             htmlFor="email"
-            className="block text-xs font-medium text-[#392820]"
+            className="block text-xs font-medium text-darkBrown-100"
           >
             Additional information
           </label>

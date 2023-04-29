@@ -5,16 +5,16 @@ import GMap from "./GMap/GMap";
 const ContactUs = () => {
   return (
     <section
-      className="contact-us__section relative bg-[#ebe0bf]"
+      className="contact-us__section relative bg-bg"
       id="contact-us"
     >
       <div className="relative mx-auto max-w-10xl py-24 sm:py-32 lg:py-40 lg:px-4">
         <div className="pr-6 pl-6 md:w-2/3 md:pl-4 lg:w-1/2 lg:pl-8  xl:pl-12">
-          <p className="mt-2 text-3xl font-bold tracking-tight text-[#382820] sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-darkBrown-200 sm:text-4xl">
             Contact Us
           </p>
 
-          <h2 className="text-base font-semibold leading-7 mt-4 mb-10 text-[#382820]">
+          <h2 className="text-base font-semibold leading-7 mt-4 mb-10 text-darkBrown-200">
             For any additional inquiries, please contact us using the
             information below:
           </h2>
@@ -33,7 +33,7 @@ const ContactUs = () => {
             </svg>
             <a
               href="mailto:Office@remsvoltexas.com"
-              className=" text-base leading-7 text-[#382820] hover:border-b-[1px] border-[#382820] transition-all duration-100"
+              className=" text-base leading-7 text-darkBrown-200 hover:border-b-[1px] border-[#382820] transition-all duration-100"
             >
               Office@remsvoltexas.com
             </a>
@@ -65,7 +65,7 @@ const ContactUs = () => {
 
             <a
               href="tel:8329439174"
-              className=" text-base leading-7 text-[#382820] hover:border-b-[1px] border-[#382820] transition-all duration-100"
+              className=" text-base leading-7 text-darkBrown-200 hover:border-b-[1px] border-[#382820] transition-all duration-100"
             >
               +1 (832) 943 91 74
             </a>
@@ -86,7 +86,7 @@ const ContactUs = () => {
 
             <p
               href="tel:8329439174"
-              className=" text-base leading-7 text-[#382820] hover:border-b-[1px] border-[#382820] transition-all duration-100"
+              className=" text-base leading-7 text-darkBrown-200 hover:border-b-[1px] border-[#382820] transition-all duration-100"
             >
               6456 Olympia Dr, Houston, Tx, 77057
             </p>
@@ -169,7 +169,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className="relative h-80 overflow-hidden bg-[#ebe0bf] md:absolute md:right-0 top-0 md:h-full md:w-1/3 lg:w-1/2">
+      <div className="relative h-80 overflow-hidden bg-bg md:absolute md:right-0 top-0 md:h-full md:w-1/3 lg:w-1/2">
         <GMap />
       </div>
     </section>

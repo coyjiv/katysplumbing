@@ -7,14 +7,14 @@ function classNames(...classes) {
 
 export default function Services() {
   return (
-    <section className="services__section bg-[#ebe0bf] py-24 sm:py-12">
+    <section className="services__section bg-bg py-24 sm:py-12">
       <div id="services" className="mx-auto max-w-7xl px-6 lg:px-8 pb-20">
         <div className="mx-auto max-w-4xl text-center">
-          <p className=" text-4xl font-bold tracking-tight text-[#392820] sm:text-5xl">
+          <p className=" text-4xl font-bold tracking-tight text-darkBrown-100 sm:text-5xl">
             Services
           </p>
         </div>
-        <p className="mx-auto mt-10 max-w-2xl text-center text-lg leading-8 text-[#392820]">
+        <p className="mx-auto mt-10 max-w-2xl text-center text-lg leading-8 text-darkBrown-100">
           We offer an extensive array of diverse services ranging from the
           construction of residential properties to the development of
           commercial structures.

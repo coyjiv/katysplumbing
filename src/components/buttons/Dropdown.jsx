@@ -34,7 +34,7 @@ function Dropdown() {
       </button>
       <animated.div style={styledProps} className='absolute'>
         <Link to='services' smooth={true} duration={500}>
-          <div className='absolute z-50 bg-[#ebe0bf] py-2 w-32 shadow-lg rounded text-[#392820] left-4 top-7 '>
+          <div className='absolute z-50 bg-bg py-2 w-32 shadow-lg rounded text-darkBrown-100 left-4 top-7 '>
             <p
               className='block px-4 py-2 h-full hover:bg-[#392820] hover:text-white  duration-300 '
               onClick={toggleDropdown}

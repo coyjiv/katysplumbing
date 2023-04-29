@@ -8,7 +8,7 @@ import NavLink from './NavLink/NavLink';
 const Navigation = () => {
   return (
     <nav className='navigation sticky top-0'>
-      <div className='navigation__wrapper  flex justify-between sm:gap-8 lg:gap-10 flex-wrap items-center  flex-row lg:h-20 px-10 bg-[#ebe0bf]'>
+      <div className='navigation__wrapper  flex justify-between sm:gap-8 lg:gap-10 flex-wrap items-center  flex-row lg:h-20 px-10 bg-bg'>
         <div className='navigation__logo w-40  lg:mr-48 flex items-center'>
           <a className='navigation__logo link'>
             <picture>
@@ -28,7 +28,7 @@ const Navigation = () => {
         <div className='navigation__items hidden md:hidden lg:block'>
           <ul className='flex flex-row gap-6 md:gap-4 lg:gap-6 font-bold lg:text-lg'>
             <NavLink href='about-us' text='ABOUT US' />
-            <li className='navigation__item duration-300 hover:translate-y-[-0.2rem] text-[#392820]'>
+            <li className='navigation__item duration-300 hover:translate-y-[-0.2rem] text-darkBrown-100'>
               <Dropdown />
             </li>
             <NavLink href='reviews' text='REVIEWS' />
