@@ -2,9 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Main from "../src/components/Main";
 import AboutUs from "../src/components/AboutUs";
-import Header from "../src/components/Header";
+import Header, { Navigation } from "../src/components/Navigation";
 import Services from "../src/components/Services";
 import Reviews from "../src/components/Reviews";
 // import GalleryComponent from '../src/components/GalleryComponent';
@@ -12,6 +11,7 @@ import { ApplyForm } from "../src/components/ApplyForm";
 import ContactUs from "../src/components/ContactUs";
 import Footer from "../src/components/Footer";
 import { ScrollToTop } from "../src/components/buttons/ScrollToTop";
+import { HeroBanner } from "../src/components/HeroBanner";
 
 export default function Home() {
   return (
@@ -24,7 +24,8 @@ export default function Home() {
 
       <>
         <ScrollToTop />
-        <Main />
+        <Navigation/>
+        <HeroBanner/>
         <AboutUs />
         <Services />
         <Reviews />
