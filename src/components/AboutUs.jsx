@@ -3,7 +3,7 @@ export default function AboutUs() {
   return (
     // OnHover should move
 
-    <div className="relative bg-ultraViolet group" id="about-us">
+    <div className="about-us relative bg-ultraViolet group" id="about-us">
       <div className="relative h-80 overflow-hidden bg-bg md:absolute md:left-0 md:h-full md:w-4/12 lg:w-1/2">
         <picture className="sepia-[.50] ">
           <source
@@ -20,7 +20,7 @@ export default function AboutUs() {
         <svg
           viewBox="0 0 926 676"
           aria-hidden="true"
-          className="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px] group-hover:-translate-y-20 transition-transform duration-300"
+          className="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px] group-hover:-translate-y-32 transition-transform duration-300"
         >
           <path
             className="z-1  fill-brightViolet"
@@ -44,10 +44,10 @@ export default function AboutUs() {
       </div>
       <div className="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
         <div className="pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-whiteColor sm:text-4xl">
             About Us
           </h2>
-          <p className="mt-6 text-base leading-7 text-gray-300">
+          <p className="mt-6 text-whiteColor text-base leading-7 text-gray-300">
             At Katy Jetting, we understand the importance of having a reliable
             plumbing system in your home. That&apos;s why we provide a range of
             services to meet your needs, from fixing leaky faucets to installing
@@ -56,7 +56,7 @@ export default function AboutUs() {
           </p>
           <Link to="apply-form" smooth={true} duration={500}>
             <div className="mt-8">
-              <p className="bg-bg text-whiteColor hover:bg-yinBlue shadow-2xl duration-300 inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white  hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white cursor-pointer">
+              <p className="bg-bg  hover:bg-yinBlue shadow-2xl duration-300 inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-whiteColor  hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white cursor-pointer">
                 Apply Now
               </p>
             </div>

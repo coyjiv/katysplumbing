@@ -8,14 +8,14 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 29.7440513916548,
-  lng: -95.49919962865243,
+  lat: 29.752724361375222,
+  lng: -95.74645957423988,
 };
 
 function GMap() {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API,
+    googleMapsApiKey: process.env.NEXT_PUBLIC_REACT_APP_GOOGLE_MAP_API,
   });
 
   const [map, setMap] = React.useState(null);
