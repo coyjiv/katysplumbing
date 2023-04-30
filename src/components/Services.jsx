@@ -10,10 +10,10 @@ export default function Services() {
   const roundedNum = Math.round(randomNum);
 
   return (
-    <section className="services__section relative">
+    <section id="services" className="services__section relative">
       <div className="bg bg-bg  absolute h-full w-full -z-20"></div>
       <div className="bg-shape bg-[url('/img/bg-shape.webp')] absolute h-full w-full -z-10 blur-sm "></div>
-      <div id="services" className="mx-auto max-w-7xl px-6 lg:px-8 pb-20">
+      <div  className="mx-auto max-w-7xl px-6 lg:px-8 pb-20">
         <div className="mx-auto max-w-4xl text-center">
           <p className=" text-4xl text-whiteColor pt-24 sm:pt-12 font-bold tracking-tight text-white sm:text-5xl">
             Our Services

@@ -24,20 +24,20 @@ export default function Footer() {
     <footer className="bg-ultraViolet h-56">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 pt-[60px] lg:px-8">
         <nav
-          className="-mb-6 columns-4 lg:columns-2 sm:flex sm:justify-center gap-0 lg:gap-4 text-center"
+          className="-mb-6 text-whiteColor/60 columns-4 lg:columns-2 sm:flex sm:justify-center gap-0 lg:gap-4 text-center"
           aria-label="Footer"
         >
           {navigation.main.map((item, i) => (
-            <Link to={item.scroll} smooth={true} duration={500} key={i}>
-              <div key={item.name} className="pb-6">
-                <p className="text-md font-display leading-6 text-white hover:text-whiteColor duration-300">
+            <Link to={item.scroll} smooth={true}  duration={500} offset={navigation.main.length - 1 === i? -100: -50} key={i}>
+              <div className="pb-6">
+                <p className="text-md cursor-pointer font-display leading-6 hover:text-whiteColor duration-300">
                   {item.name}
                 </p>
               </div>
             </Link>
           ))}
         </nav>
-        <div className="mt-5 flex justify-center gap-8">
+        <div className="mt-5 text-whiteColor/60 flex justify-center gap-8">
           {navigation.social.map((item) => (
             <a
               key={item.name}
@@ -50,7 +50,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="mt-5 font-display text-center text-sm leading-5 text-white">
+        <p className="mt-5 text-whiteColor/60 font-display text-center text-sm leading-5 text-white">
           &copy; 2023 Katy Jetting. All rights reserved.
         </p>
       </div>
