@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import AboutUs from "../src/components/AboutUs";
 import { Navigation } from "../src/components/Navigation";
 import Services from "../src/components/Services";
-import Reviews from "../src/components/Reviews";
+import Reviews from "../src/components/Reviews"
 // import GalleryComponent from '../src/components/GalleryComponent';
 import { ApplyForm } from "../src/components/ApplyForm";
 import ContactUs from "../src/components/ContactUs";

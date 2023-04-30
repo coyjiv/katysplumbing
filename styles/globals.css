@@ -21,17 +21,10 @@ a {
 * {
   box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-    background: #413f54;
-  }
-  body {
-    color: #413f54;
-    background: black;
-  }
+html {
+  background: #413f54;
 }
+
 
 body {
   margin: 0;
@@ -54,43 +47,6 @@ code {
 img {
   margin: 0px auto;
 }
-
-/* .gallery-images img:not(:first-child) {
-  display: none !important;
-
-  .gallery-images img:first-child {
-    display: none !important;
-  }
-} */
-
-/* @media (min-width:1024px) {
-  .gallery-images img:first-child {
-    display: none !important;
-  }
-} */
-/* @media (min-width: 1024px) {
-  .gallery-images{
-    display: flex;
-    justify-content: center;
-  }
-  }
-.gallery-images
-  img:not(:first-child, :last-child, :nth-child(2), :nth-child(3)) {
-  display: none !important;
-}
-@media (min-width: 1024px) {
-  .gallery-images
-    img:not(:first-child, :last-child, :nth-child(2), :nth-child(3)) {
-    display: block !important;
-    
-  }
-}
-
-@media (max-width: 1022px) {
-  .gallery-images img:not(:first-child) {
-    display: none !important;
-  }
-} */
 
 @media (max-width: 1180px) {
   .navigation__logo {

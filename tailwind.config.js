@@ -16,25 +16,25 @@ module.exports = {
         50: ".50",
         75: ".75",
       },
-    },
-    fontFamily: {
-      display: ["Roboto", "sans-serif"],
-      display: ["Roboto", "sans-serif"],
-    },
-    colors: {
-      darkBrown: {
-        100: "#392820",
-        200: "#382820",
+      fontFamily: {
+        display: ["Roboto", "sans-serif"],
+        display: ["Roboto", "sans-serif"],
       },
-      whiteColor: "white",
-      bg: "#413f54",
-      ultraViolet: "#5f5aa2",
-      brightViolet: "#9089F2",
-      yinBlue: "#355691",
-      onyx: "#3f4045",
-      darkerThanBg: "#30292f",
-      lightBrown: {
-        100: "#a67651",
+      colors: {
+        darkBrown: {
+          100: "#392820",
+          200: "#382820",
+        },
+        whiteColor: "white",
+        bg: "#413f54",
+        ultraViolet: "#5f5aa2",
+        brightViolet: "#9089F2",
+        yinBlue: "#355691",
+        onyx: "#3f4045",
+        darkerThanBg: "#30292f",
+        lightBrown: {
+          100: "#a67651",
+        },
       },
     },
   },

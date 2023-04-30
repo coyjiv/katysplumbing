@@ -60,11 +60,11 @@ export default function Reviews() {
   return (
     <div id="reviews" className="bg-[#D4A96E] pt-20 pb-20">
       <h1 className="text-center text-darkBrown-100 lg:text-5xl text-3xl font-bold mb-12">
-        Company Reviews
+        Client Reviews
       </h1>
 
       <div className="review lg:mx-16 mx-5">
-        <h2 className="sr-only">Company Reviews</h2>
+        <h2 className="sr-only">Client Reviews</h2>
 
         <div className="-my-10 pt-10 pb-14 lg:pt-0 overflow-hidden">
           {reviews.map((review, reviewIdx) => (
