@@ -30,12 +30,12 @@ export const Navigation = () => {
         </div>
         <div className="navigation__items hidden md:hidden lg:block">
           <ul className="flex flex-row gap-6 md:gap-4 lg:gap-4 font-bold lg:text-lg">
-            <NavLink href="about-us" text="ABOUT US" />
+            <li className="duration-300 hover:translate-y-[-0.2rem]"><NavLink href="about-us" text="ABOUT US" /></li>
             <li className="navigation__item duration-300 hover:translate-y-[-0.2rem] text-white">
               <Dropdown />
             </li>
-            <NavLink href="reviews" text="REVIEWS" />
-            <NavLink href="contact-us" text="CONTACT US" />
+            <li className="duration-300 hover:translate-y-[-0.2rem]"><NavLink href="reviews" text="REVIEWS" /></li>
+            <li className="duration-300 hover:translate-y-[-0.2rem]"><NavLink href="contact-us" text="CONTACT US" /></li>
           </ul>
         </div>
 
