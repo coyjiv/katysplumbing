@@ -16,7 +16,7 @@ const ContactUs = () => {
             information below:
           </h2>
 
-          <div className="email flex flex-row items-center gap-2">
+          <div className="email min-h-[30px] flex flex-row items-center gap-2">
             <svg
               stroke="white"
               fill="white"
@@ -30,13 +30,13 @@ const ContactUs = () => {
             </svg>
             <a
               href="mailto:Office@remsvoltexas.com"
-              className=" text-base leading-7 text-whiteColor hover:border-b-[1px] border-whiteColor transition-all duration-100"
+              className=" text-base leading-7 text-whiteColor border-opacity-0 border-b-[1px]  hover:border-opacity-100 border-whiteColor transition-all duration-100"
             >
               email@.com
             </a>
           </div>
 
-          <div className="phone flex flex-row items-center gap-2">
+          <div className="phone min-h-[30px] flex flex-row items-center gap-2">
             <svg
               stroke="white"
               fill="none"
@@ -62,13 +62,13 @@ const ContactUs = () => {
 
             <a
               href="tel:832-816-8860"
-              className=" text-base leading-7 text-whiteColor hover:border-b-[1px] border-whiteColor transition-all duration-100"
+              className=" text-base leading-7 text-whiteColor border-opacity-0 border-b-[1px]  hover:border-opacity-100 border-whiteColor transition-all duration-100"
             >
               +1 - 832 - 816 - 8860
             </a>
           </div>
 
-          <div className="adress flex flex-row items-center gap-2 mb-10">
+          <div className="adress min-h-[30px] flex flex-row items-center gap-2 mb-10">
             <svg
               stroke="white"
               fill="white"
@@ -85,7 +85,7 @@ const ContactUs = () => {
               rel="noreferrer"
               target="_blank"
               href="https://goo.gl/maps/o51N9KTsapS48gxQ7"
-              className=" text-base leading-7 text-whiteColor hover:border-b-[1px] border-whiteColor transition-all duration-100"
+              className=" text-base leading-7 text-whiteColor border-opacity-0 border-b-[1px]  hover:border-opacity-100 border-whiteColor transition-all duration-100"
             >
               2055 Bluffton Ln, Katy, TX 77450
             </a>

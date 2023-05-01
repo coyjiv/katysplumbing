@@ -55,3 +55,44 @@ img {
 }
 
 
+#reviews{
+background: linear-gradient(90deg, rgba(95,90,162,1) 0%, rgba(90,95,255,1) 100%);
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+	height: 100vh;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #9089F2 #5f5aa2;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #5f5aa2;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #9089F2;
+    border-radius: 10px;
+    border: 0px solid #413f54;
+  }
