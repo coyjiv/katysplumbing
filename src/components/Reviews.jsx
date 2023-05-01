@@ -1,13 +1,13 @@
-import { StarIcon } from "@heroicons/react/20/solid";
-import { AnimationOnScroll } from "react-animation-on-scroll";
-import "animate.css/animate.min.css";
+import {animated, useSpring} from 'react-spring'
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 const reviews = [
   {
     id: 1,
     rating: 5,
     content: `
-      <p>During the past year that Remsvol has been completing renovations at our community we have been overly pleased at the communication and thorough work that has been delivered. Remsvol would be a tremendous asset to any organization needing renovations and they have the best prices in the market, we could not be more pleased to work with this company.</p>
+      During the past year that Remsvol has been completing renovations at our community we have been overly pleased at the communication and thorough work that has been delivered. Remsvol would be a tremendous asset to any organization needing renovations and they have the best prices in the market, we could not be more pleased to work with this company.
     `,
     author: "The Willows Ashley Park",
     avatarSrc: "/img/willows-logo.jpeg",
@@ -16,7 +16,7 @@ const reviews = [
     id: 2,
     rating: 5,
     content: `
-      <p>Our team was happy to work with Remsvol LLC on exterior paining project of entire apartment complex in Charlotte, NC. As the owner of the company, I know what a reliable general contractor means. And the qualities that a contractor must possess can be found in the operations of Remsvol. The management of Remsvol LLC showed their professionalism and loyalty to our company.</p>
+      Our team was happy to work with Remsvol LLC on exterior paining project of entire apartment complex in Charlotte, NC. As the owner of the company, I know what a reliable general contractor means. And the qualities that a contractor must possess can be found in the operations of Remsvol. The management of Remsvol LLC showed their professionalism and loyalty to our company.
     `,
 
     author: `Javier's Painting`,
@@ -27,9 +27,9 @@ const reviews = [
     id: 3,
     rating: 5,
     content: `
-      <p>I would like to commend Remsvol LLC for an outstanding job on Preserve at Port
+      I would like to commend Remsvol LLC for an outstanding job on Preserve at Port
       Royal renovation project. In my experience, Remsvol has proven to be an excellent
-      professional who eager to show the best quality of their work. We will continue to work with Remsvol on upcoming Complex Renovation projects.</p>
+      professional who eager to show the best quality of their work. We will continue to work with Remsvol on upcoming Complex Renovation projects.
     `,
 
     author: `Preserve Port Royal`,
@@ -40,11 +40,11 @@ const reviews = [
     id: 4,
     rating: 5,
     content: `
-      <p>I have had the opportunity to work with Remsvol from 2022. Remsvol LLC has managed these
+      I have had the opportunity to work with Remsvol from 2022. Remsvol LLC has managed these
       works in the manner that allowed them to be completed on or ahead the schedule while
       maintaining the excellent relationship with the client, employer and our construction teams on
       site. On-site coordination was handled very professionally, and all the required paperwork and
-      queries were responded to promptly.</p>
+      queries were responded to promptly.
     `,
 
     author: `DM Construction`,
@@ -52,82 +52,125 @@ const reviews = [
   },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Reviews() {
   return (
-    <div id="reviews" className="bg-[#D4A96E] pt-20 pb-20">
-      <h1 className="text-center text-darkBrown-100 lg:text-5xl text-3xl font-bold mb-12">
+    <section id="reviews" className="bg-ultraViolet pt-20 pb-40 min-h-[800px] shadow-2xl">
+      <h1 className="text-center text-white lg:text-5xl text-3xl font-bold border-b-ultraViolet mb-12">
         Client Reviews
       </h1>
 
       <div className="review lg:mx-16 mx-5">
         <h2 className="sr-only">Client Reviews</h2>
-
-        <div className="-my-10 pt-10 pb-14 lg:pt-0 overflow-hidden">
-          {reviews.map((review, reviewIdx) => (
-            <AnimationOnScroll
-              key={reviewIdx}
-              animateOnce
-              animateIn={
-                reviewIdx % 2 === 0
-                  ? "animate__fadeInLeftBig"
-                  : "animate__fadeInRightBig"
-              }
-            >
-              <div
-                key={review.id}
-                className="shadow-lg lg:shadow-none px-8 mt-6 lg:mt-0 lg:px-0 pb-10 lg:pb-0 rounded-3xl lg:rounded-none bg-amber-100/20 lg:bg-transparent flex sm:max-w-[80%] lg:max-w-full mx-auto lg:mx-0 flex-col lg:flex-row lg:space-x-4 text-sm text-darkBrown-100"
-              >
-                <div className="flex-none py-5 lg:py-10">
-                  <img
-                    loading="lazy"
-                    src={review.avatarSrc}
-                    alt=""
-                    className="h-20 w-20 lg:h-32 lg:w-32 rounded-full bg-gray-100"
-                  />
-                </div>
-                <div
-                  className={classNames(
-                    reviewIdx === 0 ? "" : "border-t-0 lg:border-t border-[#392820]",
-                    "flex-1 lg:py-10"
-                  )}
-                >
-                  <h3 className="font-bold text-center lg:text-left text-darkBrown-100 text-xl lg:text-lg">
-                    {review.author}
-                  </h3>
-                  <p>
-                    <time dateTime={review.datetime}>{review.date}</time>
-                  </p>
-
-                  <div className="mt-4 flex items-center justify-center lg:justify-start">
-                    {[0, 1, 2, 3, 4].map((rating) => (
-                      <StarIcon
-                        key={rating}
-                        className={classNames(
-                          review.rating > rating
-                            ? "text-yellow-400"
-                            : "text-gray-300",
-                          "h-5 w-5 flex-shrink-0 drop-shadow-lg lg:drop-shadow-none"
-                        )}
-                        aria-hidden="true"
-                      />
-                    ))}
-                  </div>
-                  <p className="sr-only">{review.rating} out of 5 stars</p>
-
-                  <div
-                    className="text-center lg:text-left prose prose-sm mt-4 max-w-none text-darkBrown-100 lg:text-base"
-                    dangerouslySetInnerHTML={{ __html: review.content }}
-                  />
-                </div>
-              </div>
-            </AnimationOnScroll>
-          ))}
-        </div>
+    <ReviewController reviews={reviews}/>
       </div>
-    </div>
+    </section>
   );
 }
+
+
+const Review = ({ review }) => {
+  const animatedRatingOpacity = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: {
+      duration: 250,
+    },
+  });
+  const animatedContentOpacity = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: {
+      duration: 500,
+    },
+  });
+  const animatedAvatarOpacity = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: {
+      duration: 750,
+    },
+  });
+  const [time, setTime] = useState(0);
+
+  useEffect(()=>{
+    const interval = setInterval(()=>{
+      setTime(time => time + 1/17)
+    }, 1)
+    return () => clearInterval(interval)
+  }, [time])
+
+  useEffect(()=>{
+    if(time > 0){
+      setTime(0)
+    }
+  }, [review])
+
+
+  return <>
+    <section class="absolute shadow-2xl px-6 py-10 lg:max-w-2xl left-1/2 -translate-x-1/2 w-[60%] rounded-xl bg-brightViolet">
+    <figure class="mx-auto max-w-2xl">
+      <p class="sr-only">5 out of 5 stars</p>
+      <animated.div class="flex gap-x-1 text-indigo-600" style={animatedRatingOpacity}>
+        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+        </svg>
+        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+        </svg>
+        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+        </svg>
+        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+        </svg>
+        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+        </svg>
+      </animated.div>
+      <animated.blockquote class="mt-10 text-xl font-semibold leading-8 tracking-tight text-gray-900 sm:text-2xl sm:leading-9" style={animatedContentOpacity}>
+        <p>“{review.content}”</p>
+      </animated.blockquote>
+      <animated.figcaption class="mt-10 flex items-center gap-x-6" style={animatedAvatarOpacity}>
+        <Image width={10} height={10} class="h-12 w-12 mx-0 rounded-full bg-gray-50" src={review.avatarSrc} alt=""/>
+        <div class="text-sm leading-6">
+          <div class="font-semibold text-gray-900">{review.author}</div>
+          <div class="mt-0.5 text-gray-600">CEO of Workcation</div>
+        </div>
+      </animated.figcaption>
+    </figure>
+    <div className='absolute -bottom-3 left-0 rounded-full h-2 w-full bg-white/20'>
+    <div className='absolute bottom-0 left-0 rounded-full h-2 z-20 bg-white full-anim' style={{width: `${time>100? 100 : time}%`}} ></div>
+    </div>
+  </section>
+ </>
+  }
+
+
+  const ReviewController = ({reviews}) => {
+    const [index, setIndex] = useState(0);
+    const [animate, setAnimate] = useState(true);
+    const animation = useSpring({
+      to: { opacity: animate ? 1 : 0 },
+      config: { duration: 200 },
+    });
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+         setAnimate(true);
+        if(index < reviews.length - 1){
+          setIndex((index + 1) % reviews.length);
+        }
+        else{
+          setIndex(0);
+        }
+        setTimeout(() => {
+          setAnimate(false);
+        }, 4000);
+      }, 4300);
+  
+      return () => clearInterval(interval);
+    }, [index, reviews.length]);
+
+    return <animated.div className='relative' style={animation}><Review review={reviews[index]} /></animated.div>
+  }
