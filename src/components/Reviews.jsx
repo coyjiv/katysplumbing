@@ -55,7 +55,7 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="bg-ultraViolet pt-20 pb-40 min-h-[800px] shadow-2xl">
+    <section id="reviews" className="bg-ultraViolet pt-20 pb-40 min-h-[1000px] lg:min-h-[800px] shadow-2xl">
       <h1 className="text-center text-white lg:text-5xl text-3xl font-bold border-b-ultraViolet mb-12">
         Client Reviews
       </h1>
@@ -94,21 +94,22 @@ const Review = ({ review }) => {
   const [time, setTime] = useState(0);
 
   useEffect(()=>{
-    const interval = setInterval(()=>{
-      setTime(time => time + 1/17)
-    }, 1)
-    return () => clearInterval(interval)
-  }, [time])
-
-  useEffect(()=>{
     if(time > 0){
       setTime(0)
     }
   }, [review])
 
+  const animate = () => requestAnimationFrame(()=>{
+    setTime(time + 1/5)
+  })
+
+  useEffect(()=>{
+    animate()
+  }, [time])
+
 
   return <>
-    <section class="absolute shadow-2xl px-6 py-10 lg:max-w-2xl left-1/2 -translate-x-1/2 w-[60%] rounded-xl bg-brightViolet">
+    <section class="absolute shadow-2xl px-6 py-10 lg:max-w-2xl left-1/2 -translate-x-1/2 w-full lg:w-[60%]  rounded-xl bg-brightViolet">
     <figure class="mx-auto max-w-2xl">
       <p class="sr-only">5 out of 5 stars</p>
       <animated.div class="flex gap-x-1 text-indigo-600" style={animatedRatingOpacity}>
@@ -154,6 +155,24 @@ const Review = ({ review }) => {
       to: { opacity: animate ? 1 : 0 },
       config: { duration: 200 },
     });
+
+    // useEffect(() => {
+    //   const interval = setInterval(() => {
+    //      setAnimate(true);
+    //     if(index < reviews.length - 1){
+    //       setIndex((index + 1) % reviews.length);
+    //     }
+    //     else{
+    //       setIndex(0);
+    //     }
+    //     setTimeout(() => {
+    //       setAnimate(false);
+    //     }, 4000);
+    //   }, 4300);
+  
+    //   return () => clearInterval(interval);
+    // }, [index, reviews.length]);
+
 
     useEffect(() => {
       const interval = setInterval(() => {
