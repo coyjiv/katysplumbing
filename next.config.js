@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ["images.unsplash.com"],
+    unoptimized: true,
   },
 }
 
