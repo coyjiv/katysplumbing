@@ -1,4 +1,4 @@
-import {animated, useSpring} from 'react-spring'
+import {animated, useSpring, useTrail} from 'react-spring'
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
@@ -7,49 +7,52 @@ const reviews = [
     id: 1,
     rating: 5,
     content: `
-      During the past year that Remsvol has been completing renovations at our community we have been overly pleased at the communication and thorough work that has been delivered. Remsvol would be a tremendous asset to any organization needing renovations and they have the best prices in the market, we could not be more pleased to work with this company.
+    Very pleased with Katy Jetting I called needing service, and the lady that answered the phone was able to assure me that they could help.I was able to get a same day appointment with a time frame that worked for me.  The tech notfied me when he was 30 mins out . The tech was very professional and informative. Pricing and warranty was explained to me which I though was a very good deal. He diagnose the issue and fix the problem quickly.  Very respectful of my home and left the area clean.  I would definitely recommend and will be my plumbing company for now on.
     `,
     author: "The Willows Ashley Park",
-    avatarSrc: "/img/willows-logo.jpeg",
+    avatarSrc: "/img/reviews/1.jpg",
   },
   {
     id: 2,
     rating: 5,
     content: `
-      Our team was happy to work with Remsvol LLC on exterior paining project of entire apartment complex in Charlotte, NC. As the owner of the company, I know what a reliable general contractor means. And the qualities that a contractor must possess can be found in the operations of Remsvol. The management of Remsvol LLC showed their professionalism and loyalty to our company.
+    I had mold in my daughter bathroom which we removed everything. The walls ceramics bath tub shower everything got treated  . Then   I had to remodel I had a contractor who did the job and recommended me Katy Jetting pluming as a very onset plumber with decent prices who will get the work done asap .  I call the office I schedule for the next day the work started 2 days after as of my request early in the morning and the crew didn’t leave till the work was completed .. I wanted to thank Charlie the owner and his professional crew for leaving my house that day with minimum dust
     `,
 
     author: `Javier's Painting`,
-    avatarSrc: "/img/javiers-painting-logo.png",
+    avatarSrc: "/img/reviews/2.jpg",
   },
 
   {
     id: 3,
     rating: 5,
     content: `
-      I would like to commend Remsvol LLC for an outstanding job on Preserve at Port
-      Royal renovation project. In my experience, Remsvol has proven to be an excellent
-      professional who eager to show the best quality of their work. We will continue to work with Remsvol on upcoming Complex Renovation projects.
+    Old valve was leaking past the valve and needed replacement before I did the dishwasher.  I called Katy Jetting and they took care of it within 2 hrs.  Cost was reasonable too, guys were polite.  What else can you ask for?
     `,
 
     author: `Preserve Port Royal`,
-    avatarSrc: "/img/preserve-logo.jpg",
+    avatarSrc: "/img/reviews/3.jpg",
   },
 
   {
     id: 4,
     rating: 5,
     content: `
-      I have had the opportunity to work with Remsvol from 2022. Remsvol LLC has managed these
-      works in the manner that allowed them to be completed on or ahead the schedule while
-      maintaining the excellent relationship with the client, employer and our construction teams on
-      site. On-site coordination was handled very professionally, and all the required paperwork and
-      queries were responded to promptly.
+    Working with Katy Jetting was great. They were on time, responsive and very helpful. In my particular case the City of Houston needed to be involved and Katy Jetting helped facilitate getting the city to react in the quickest manner possible. I would absolutely use Katy Jetting in the future for any plumbing needs.
     `,
 
     author: `DM Construction`,
-    avatarSrc: "/img/dm-construction-logo.jpg",
+    avatarSrc: "/img/reviews/4.jpg",
   },
+  {
+    id: 5,
+    rating: 5,
+    content: `
+    Katy Jetting was great. Came at night because we had a leak in the upstairs bathroom. He came quickly, diagnosed the problem and fixed it quickly. He was also careful to keep things clean while walking  around the house and was very reasonable. I would highly recommend Katy Jetting.
+    `,
+    author: `The Willows Ashley Park`,
+    avatarSrc: "/img/reviews/5.jpg",
+  }
 ];
 
 
@@ -70,25 +73,38 @@ export default function Reviews() {
 
 
 const Review = ({ review }) => {
-  const animatedRatingOpacity = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: {
-      duration: 250,
+  const [animateStars, setAnimateStars] = useState(false);
+
+  const starProps = useTrail(5, {
+    from: {
+      opacity: 0,
+      transform: 'scale(0.5) rotate(-30deg)',
     },
-  });
-  const animatedContentOpacity = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
+    to: {
+      opacity:  1,
+      transform: 'scale(1) rotate(0deg)',
+    },
     config: {
-      duration: 500,
+      mass: 1,
+      tension: 400,
+      friction: 30,
+    },
+    delay: 100,
+  });
+
+  const animatedContentOpacity = useSpring({
+    from: { opacity: 0, transform: 'translateY(-5px)' },
+    to: { opacity: 1, transform: 'translateY(0px)' },
+    config: {
+      duration: 300,
+      friction: 10,
     },
   });
   const animatedAvatarOpacity = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
+    from: { opacity: 0, transform: 'translateY(5px)' },
+    to: { opacity: 1 , transform: 'translateY(0px)' },
     config: {
-      duration: 750,
+      duration: 300,
     },
   });
   const [time, setTime] = useState(0);
@@ -108,40 +124,36 @@ const Review = ({ review }) => {
   }, [time])
 
 
+
   return <>
-    <section class="absolute shadow-2xl px-6 py-10 lg:max-w-2xl left-1/2 -translate-x-1/2 w-full lg:w-[60%]  rounded-xl bg-brightViolet">
-    <figure class="mx-auto max-w-2xl">
-      <p class="sr-only">5 out of 5 stars</p>
-      <animated.div class="flex gap-x-1 text-indigo-600" style={animatedRatingOpacity}>
-        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-        </svg>
-        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-        </svg>
-        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-        </svg>
-        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-        </svg>
-        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-        </svg>
+    <section className="absolute shadow-2xl px-6 py-10 lg:max-w-2xl left-1/2 -translate-x-1/2 w-full lg:w-[60%]  rounded-xl bg-brightViolet">
+    <figure className="mx-auto max-w-2xl">
+      <p className="sr-only">5 out of 5 stars</p>
+      <animated.div className="flex gap-x-1 text-indigo-600">
+      {starProps.map((props, index) => (
+          <animated.svg
+            key={index}
+            style={props}
+            class="star h-5 w-5 flex-none" fill="currentColor" aria-hidden="true"
+            viewBox="0 0 20 20"
+          >
+            <path d="M10 15.591l-4.069 2.485c-.714.436-1.599-.207-1.405-1.02l1.106-4.637-3.62-3.102c-.633-.543-.296-1.583.536-1.65l4.752-.382 1.831-4.401c.321-.772 1.415-.772 1.736 0l1.83 4.401 4.753.381c.833.067 1.171 1.107.536 1.651l-3.62 3.102 1.106 4.637c.194.813-.691 1.456-1.405 1.02L10 15.591z" />
+          </animated.svg>
+        ))}
       </animated.div>
-      <animated.blockquote class="mt-10 text-xl font-semibold leading-8 tracking-tight text-gray-900 sm:text-2xl sm:leading-9" style={animatedContentOpacity}>
-        <p>“{review.content}”</p>
+      <animated.blockquote className="mt-10 text-xl font-semibold leading-8 tracking-tight text-gray-900 sm:text-2xl sm:leading-9" style={animatedContentOpacity}>
+        <p className='line-clamp-6'>“{review.content}”</p>
       </animated.blockquote>
-      <animated.figcaption class="mt-10 flex items-center gap-x-6" style={animatedAvatarOpacity}>
-        <Image width={10} height={10} class="h-12 w-12 mx-0 rounded-full bg-gray-50" src={review.avatarSrc} alt=""/>
-        <div class="text-sm leading-6">
-          <div class="font-semibold text-gray-900">{review.author}</div>
-          <div class="mt-0.5 text-gray-600">CEO of Workcation</div>
+      <animated.figcaption className="mt-10 flex items-center gap-x-6" style={animatedAvatarOpacity}>
+        <Image width={100} height={100} className="h-12 w-12 mx-0 rounded-full bg-gray-50" src={review.avatarSrc} alt=""/>
+        <div className="text-sm leading-6">
+          <div className="font-semibold text-gray-900">{review.author}</div>
+          <div className="mt-0.5 text-gray-600">CEO of Workcation</div>
         </div>
       </animated.figcaption>
     </figure>
-    <div className='absolute -bottom-3 left-0 rounded-full h-2 w-full bg-white/20'>
-    <div className='absolute bottom-0 left-0 rounded-full h-2 z-20 bg-white full-anim' style={{width: `${time>100? 100 : time}%`}} ></div>
+    <div className='absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full h-1 w-[95%] bg-white/20'>
+    <div className='absolute shadow-2xl drop-shadow-xl shadow-white bottom-0 left-0 rounded-full h-1 z-20 bg-white full-anim' style={{width: `${time>100? 100 : time}%`}} ></div>
     </div>
   </section>
  </>
@@ -155,23 +167,6 @@ const Review = ({ review }) => {
       to: { opacity: animate ? 1 : 0 },
       config: { duration: 200 },
     });
-
-    // useEffect(() => {
-    //   const interval = setInterval(() => {
-    //      setAnimate(true);
-    //     if(index < reviews.length - 1){
-    //       setIndex((index + 1) % reviews.length);
-    //     }
-    //     else{
-    //       setIndex(0);
-    //     }
-    //     setTimeout(() => {
-    //       setAnimate(false);
-    //     }, 4000);
-    //   }, 4300);
-  
-    //   return () => clearInterval(interval);
-    // }, [index, reviews.length]);
 
 
     useEffect(() => {
@@ -191,5 +186,5 @@ const Review = ({ review }) => {
       return () => clearInterval(interval);
     }, [index, reviews.length]);
 
-    return <animated.div className='relative' style={animation}><Review review={reviews[index]} /></animated.div>
+    return <animated.div className='relative' style={animation}><Review key={reviews[index].id} review={reviews[index]} /></animated.div>
   }

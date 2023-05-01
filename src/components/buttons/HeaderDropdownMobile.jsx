@@ -42,10 +42,10 @@ function HeaderDropdownMobile() {
         </button>
       </div>
       <animated.div
-        className="fixed z-50 bg-bg shadow-lg rounded h-screen w-screen"
+        className="fixed z-[101] bg-bg shadow-lg rounded h-screen w-screen"
         style={props}
       >
-        <div className="h-full relative">
+        <div className="h-full z-[100] relative">
           <button onClick={toggleDropdown} className="absolute right-10 top-5">
             <svg
               className="fill-whiteColor"
@@ -59,7 +59,7 @@ function HeaderDropdownMobile() {
             </svg>
           </button>
           <ul className=" py-12 px-10 text-left w-[380px]  text-white  ">
-            <Link to="about-us" smooth={true} duration={500}>
+            <Link to="about-us" smooth={true} duration={500} offset={-50}>
               <li
                 href="#"
                 className=" text-whiteColor block px-4 py-2 h-full  hover:bg-ultraViolet  duration-300 "
@@ -68,7 +68,7 @@ function HeaderDropdownMobile() {
                 About us
               </li>
             </Link>
-            <Link to="services" smooth={true} duration={500}>
+            <Link to="services" smooth={true} duration={500} offset={-50}>
               <li
                 href="#"
                 className=" text-whiteColor block px-4 py-2 hover:bg-ultraViolet duration-300 "
@@ -77,7 +77,7 @@ function HeaderDropdownMobile() {
                 Services
               </li>
             </Link>
-            <Link to="reviews" smooth={true} duration={500}>
+            <Link to="reviews" smooth={true} duration={500} offset={-50}>
               <li
                 href="#"
                 className=" text-whiteColor block px-4 py-2 hover:bg-ultraViolet duration-300 "
@@ -86,7 +86,7 @@ function HeaderDropdownMobile() {
                 Reviews
               </li>
             </Link>
-            <Link to="contact-us" smooth={true} duration={500}>
+            <Link to="contact-us" smooth={true} duration={500} offset={-50}>
               <li
                 href="#"
                 className=" text-whiteColor block px-4 py-2 hover:bg-ultraViolet duration-300 "
@@ -98,7 +98,7 @@ function HeaderDropdownMobile() {
 
             <a
               href="tel: (832) 816-8860"
-              className="text-whiteColor mx-4 py-2 w-fit navigation__button cursor-pointer p-1 duration-300 border-b"
+              className="text-whiteColor mx-4 mt-5 block py-2 w-fit navigation__button cursor-pointer p-1 duration-300 border-b"
             >
               Call now
             </a>
