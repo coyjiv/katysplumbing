@@ -9,7 +9,7 @@ const navigation = {
   social: [
     {
       name: "Email",
-      href: "mailto: example@com.ua",
+      href: "mailto: katyjetting@gmail.com",
     },
 
     {
