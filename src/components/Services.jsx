@@ -32,14 +32,14 @@ export default function Services() {
               className={classNames(
                 tier.color,
                 tier.featured ? "Custom " : "",
-                `rounded-3xl bg-whiteColor bg-opacity-20  p-8
+                `rounded-3xl bg-white bg-opacity-20  p-8
                 )}  xl:p-10 hover:-translate-y-4 duration-150`
               )}
             >
               <h3
                 id={tier.id}
                 className={classNames(
-                  tier.featured ? "text-whiteColor" : "text-gray-200",
+                  tier.featured ? "text-whiteColor" : "text-whiteColor",
                   "text-lg font-semibold leading-8   "
                 )}
               >
@@ -47,7 +47,7 @@ export default function Services() {
               </h3>
               <p
                 className={classNames(
-                  tier.featured ? "text-gray-300" : "text-gray-200",
+                  tier.featured ? "text-whiteColor" : "text-whiteColor",
                   "mt-4 text-sm leading-6"
                 )}
               >
