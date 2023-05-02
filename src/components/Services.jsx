@@ -13,33 +13,33 @@ export default function Services() {
     <section id="services" className="services__section relative">
       <div className="bg bg-bg  absolute h-full w-full -z-20"></div>
       <div className="bg-shape bg-[url('/img/bg-shape.webp')] absolute h-full w-full -z-10 blur-sm "></div>
-      <div  className="mx-auto max-w-7xl px-6 lg:px-8 pb-20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-20">
         <div className="mx-auto max-w-4xl text-center">
-          <p className=" text-4xl text-whiteColor pt-24 sm:pt-12 font-bold tracking-tight text-white sm:text-5xl">
+          <p className=" text-4xl text-whiteColor pt-24 sm:pt-12 font-bold tracking-tight  sm:text-5xl">
             Our Services
           </p>
         </div>
-        <p className="mx-auto text-whiteColor mt-10 max-w-2xl text-center text-lg leading-8 text-white">
+        <p className="mx-auto text-whiteColor mt-10 max-w-2xl text-center text-lg leading-8 ">
           With more than 30 years of collective plumbing expertise, Katty
           Jetting is your go-to for resolving all your plumbing issues promptly
           and affordably. Trust our skilled plumbers to provide effective
           solutions for your plumbing problems.
         </p>
-        <div className="isolate text-whiteColor mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
+        <div className="isolate text-whiteColor    mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
           {tiers.map((tier) => (
             <div
               key={tier.id}
               className={classNames(
                 tier.color,
                 tier.featured ? "Custom " : "",
-                `rounded-3xl p-8
+                `rounded-3xl bg-whiteColor bg-opacity-20  p-8
                 )}  xl:p-10 hover:-translate-y-4 duration-150`
               )}
             >
               <h3
                 id={tier.id}
                 className={classNames(
-                  tier.featured ? "text-white" : "text-gray-200",
+                  tier.featured ? "text-whiteColor" : "text-gray-200",
                   "text-lg font-semibold leading-8   "
                 )}
               >

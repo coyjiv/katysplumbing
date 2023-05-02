@@ -8,11 +8,11 @@ export default function AboutUs() {
         <picture className="sepia-[.50] ">
           <source
             media="(max-width: 1023px)"
-            srcSet="/img/about-us-bg-sm.jpg"
+            srcSet="/img/about-us-bg-sm.webp"
           />
-          <source media="(min-width: 1024px)" srcSet="/img/about-us-bg.jpg" />
+          <source media="(min-width: 1024px)" srcSet="/img/about-us-bg.webp" />
           <img
-            src="/img/about-us-bg-sm.jpg"
+            src="/img/about-us-bg-sm.webp"
             className="h-full  w-full object-cover"
             alt="About us"
           />
@@ -47,7 +47,7 @@ export default function AboutUs() {
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-whiteColor sm:text-4xl">
             About Us
           </h2>
-          <p className="mt-6 text-whiteColor text-base leading-7 text-gray-300">
+          <p className="mt-6  text-base leading-7 text-gray-300">
             At Katy Jetting, we understand the importance of having a reliable
             plumbing system in your home. That&apos;s why we provide a range of
             services to meet your needs, from fixing leaky faucets to installing
