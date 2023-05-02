@@ -32,7 +32,7 @@ export default function Services() {
               className={classNames(
                 tier.color,
                 tier.featured ? "Custom " : "",
-                `rounded-3xl bg-white bg-opacity-20  p-8
+                `rounded-3xl bg-gray-300 bg-opacity-20  p-8
                 )}  xl:p-10 hover:-translate-y-4 duration-150`
               )}
             >
@@ -72,7 +72,7 @@ export default function Services() {
                   )}
                 ></span>
               </p>
-              <Link to="apply-form" smooth={true} duration={500}>
+              <Link to="form1" smooth={true} duration={500}>
                 <p
                   aria-describedby={tier.id}
                   className={classNames(
