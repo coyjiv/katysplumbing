@@ -8,7 +8,7 @@ const navigation = {
   ],
   social: [
     {
-      name: "Email",
+      name: "katyjetting@gmail.com",
       href: "mailto: katyjetting@gmail.com",
     },
 
@@ -28,7 +28,13 @@ export default function Footer() {
           aria-label="Footer"
         >
           {navigation.main.map((item, i) => (
-            <Link to={item.scroll} smooth={true}  duration={500} offset={navigation.main.length - 1 === i? -100: -50} key={i}>
+            <Link
+              to={item.scroll}
+              smooth={true}
+              duration={500}
+              offset={navigation.main.length - 1 === i ? -100 : -50}
+              key={i}
+            >
               <div className="pb-6">
                 <p className="text-md cursor-pointer font-display leading-6 hover:text-whiteColor duration-300">
                   {item.name}
