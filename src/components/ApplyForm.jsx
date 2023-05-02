@@ -48,7 +48,7 @@ export const ApplyForm = () => {
   return (
     <section className="bg-bg pt-20 lg:pt-0" id="form1">
       <h1 className="lg:hidden text-center text-white text-3xl mb-10 lg:text-5xl font-bold lg:mb-20">
-        Client application
+        Let our service work for you!
       </h1>
 
       <div className="flex justify-center lg:justify-between lg:h-[110vh] ">
