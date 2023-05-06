@@ -54,7 +54,7 @@ export default function AboutUs() {
             new water heaters. Our team of expert plumbers is highly skilled and
             trained to handle any plumbing issue with ease and efficiency.
           </p>
-          <Link to="apply-form" smooth={true} duration={500}>
+          <Link to="form1" smooth={true} duration={500}>
             <div className="mt-8">
               <p className="bg-bg  hover:bg-yinBlue shadow-2xl duration-300 inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-whiteColor  hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white cursor-pointer">
                 Apply Now
