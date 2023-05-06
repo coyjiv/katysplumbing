@@ -5,8 +5,10 @@ import { Link } from "react-scroll";
 import { useFormik } from "formik";
 import { validationSchema } from "@/constants/validationSchema";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 export const HeroBanner = () => {
+  const createAlert = ({ text, type }) => toast(text, { type });
   const props = useSpring({
     opacity: 1,
     y: 0,

@@ -15,6 +15,6 @@ export const validationSchema = Yup.object().shape({
   licenseNumber: Yup.string(),
   businessType: Yup.string(),
   services: Yup.string(),
-  phoneNumber: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
+  phone: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
   additionalInformation: Yup.string(),
 });

@@ -6,9 +6,11 @@ import DropdownServices from "./buttons/DropdownServices";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 import Image from "next/image";
+import { toast } from "react-toastify";
 
 export const ApplyForm = () => {
   // EmailJS + Formik
+  const createAlert = ({ text, type }) => toast(text, { type });
   const form = useRef();
 
   const initialValues = {
