@@ -17,7 +17,7 @@ function Dropdown() {
   };
   return (
     <div className="relative">
-      <button
+      <button aria-label="close mobile menu"
         className="rounded inline-flex items-center"
         onClick={toggleDropdown}
       >
