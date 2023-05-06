@@ -92,7 +92,7 @@ export const HeroBanner = () => {
             style={props2}
           >
             {/* <li className="list-none hover:text-bg"> */}
-              <Link smooth={true} duration={500} offset={-50} to="form1">
+              <Link smooth={true} duration={500} offset={-50} to="form1" href="#form1">
                 Schedule Service
               </Link>
             {/* </li> */}
@@ -102,7 +102,7 @@ export const HeroBanner = () => {
             style={props3}
           >
             {/* <li className="list-none hover:text-bg"> */}
-              <Link smooth={true} duration={500} offset={-50} to="about-us">
+              <Link smooth={true} duration={500} offset={-50} to="about-us" href="#about-us">
                 About Us
               </Link>
             {/* </li> */}
