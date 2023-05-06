@@ -8,7 +8,7 @@ export const Navigation = () => {
     <nav className="navigation fixed top-0 w-full  z-40">
       <div className="navigation__wrapper py-2 md:py-0 md:h-20 flex justify-between sm:gap-8 lg:gap-2 flex-wrap items-center  flex-row lg:h-20 px-5 md:px-10  bg-bg">
         <div className="navigation__logo w-40  lg:mr-48 flex items-center">
-          <a className="navigation__logo link">
+          <div onClick={ ()=>window.scrollTo({ top: 0, behavior: 'smooth' })} className="navigation__logo link">
             <div className=" p-[2px] lg:px-2 h-9 max-w-[2.25rem] lg:max-w-[3.5rem] lg:h-14 flex justify-evenly items-center drop-shadow-lg bg-brightViolet bg-opacity-60 rounded-full">
               <h1 className="sr-only font-bold font-sans text-2xl text-whiteColor">
                 Kattys Plumbing Service
@@ -26,7 +26,7 @@ export const Navigation = () => {
                 />
               </picture>
             </div>
-          </a>
+          </div>
         </div>
         <div className="navigation__items hidden md:hidden lg:block">
           <ul className="flex flex-row gap-6 md:gap-4 lg:gap-4 font-bold lg:text-lg">
