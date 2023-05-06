@@ -30,6 +30,7 @@ export default function Footer() {
           {navigation.main.map((item, i) => (
             <Link
               to={item.scroll}
+              href={"#"+item.scroll}
               smooth={true}
               duration={500}
               offset={navigation.main.length - 1 === i ? -100 : -50}

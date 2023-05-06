@@ -72,7 +72,7 @@ export default function Services() {
                   )}
                 ></span>
               </p>
-              <Link to='form1' smooth={true} duration={500}>
+              <Link to='form1' href="#form1" smooth={true} duration={500}>
                 <p
                   aria-describedby={tier.id}
                   className={classNames(

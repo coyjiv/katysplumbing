@@ -33,7 +33,7 @@ function Dropdown() {
         </svg>
       </button>
       <animated.div style={styledProps} className="absolute">
-        <Link to="services" smooth={true} duration={500}>
+        <Link to="services" href="#services" smooth={true} duration={500}>
           <div className="absolute z-50 bg-bg py-2 w-32 shadow-lg rounded text-whiteColor left-4 top-7 ">
             <p
               className="block px-4 py-2 h-full hover:bg-white hover:text-bg cursor-pointer duration-300 "

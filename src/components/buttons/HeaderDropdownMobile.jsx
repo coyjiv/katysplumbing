@@ -75,6 +75,7 @@ function HeaderDropdownMobile() {
             <li className=' text-whiteColor block px-4 py-2 h-full  hover:bg-ultraViolet  duration-300 '>
               <Link
                 to='about-us'
+                href="#about-us"
                 smooth={true}
                 duration={500}
                 offset={-50}
@@ -86,6 +87,7 @@ function HeaderDropdownMobile() {
             <li className=' text-whiteColor block px-4 py-2 hover:bg-ultraViolet duration-300 '>
               <Link
                 to='services'
+                href="#services"
                 smooth={true}
                 duration={500}
                 offset={-50}
@@ -97,6 +99,7 @@ function HeaderDropdownMobile() {
             <li className=' text-whiteColor block px-4 py-2 hover:bg-ultraViolet duration-300 '>
               <Link
                 to='reviews'
+                href="#reviews"
                 smooth={true}
                 duration={500}
                 offset={-50}
@@ -108,6 +111,7 @@ function HeaderDropdownMobile() {
             <li className=' text-whiteColor block px-4 py-2 hover:bg-ultraViolet duration-300 '>
               <Link
                 to='contact-us'
+                href="#contact-us"
                 smooth={true}
                 duration={500}
                 offset={-50}
