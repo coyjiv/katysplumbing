@@ -7,7 +7,7 @@ const reviews = [
     id: 1,
     rating: 5,
     content: `
-    Very pleased with Katy Jetting I called needing service, and the lady that answered the phone was able to assure me that they could help.I was able to get a same day appointment with a time frame that worked for me.  The tech notfied me when he was 30 mins out . The tech was very professional and informative. Pricing and warranty was explained to me which I though was a very good deal. He diagnose the issue and fix the problem quickly.  Very respectful of my home and left the area clean.  I would definitely recommend and will be my plumbing company for now on.
+    Very pleased with Katys Plumbing Service I called needing service, and the lady that answered the phone was able to assure me that they could help.I was able to get a same day appointment with a time frame that worked for me.  The tech notfied me when he was 30 mins out . The tech was very professional and informative. Pricing and warranty was explained to me which I though was a very good deal. He diagnose the issue and fix the problem quickly.  Very respectful of my home and left the area clean.  I would definitely recommend and will be my plumbing company for now on.
     `,
     author: "Joshua Patel",
     avatarSrc: "/img/reviews/1.jpg",
@@ -16,7 +16,7 @@ const reviews = [
     id: 2,
     rating: 5,
     content: `
-    I had mold in my daughter bathroom which we removed everything. The walls ceramics bath tub shower everything got treated  . Then   I had to remodel I had a contractor who did the job and recommended me Katy Jetting pluming as a very onset plumber with decent prices who will get the work done asap .  I call the office I schedule for the next day the work started 2 days after as of my request early in the morning and the crew didn’t leave till the work was completed .. I wanted to thank Charlie the owner and his professional crew for leaving my house that day with minimum dust
+    I had mold in my daughter bathroom which we removed everything. The walls ceramics bath tub shower everything got treated  . Then   I had to remodel I had a contractor who did the job and recommended me Katys Plumbing Service pluming as a very onset plumber with decent prices who will get the work done asap .  I call the office I schedule for the next day the work started 2 days after as of my request early in the morning and the crew didn’t leave till the work was completed .. I wanted to thank Charlie the owner and his professional crew for leaving my house that day with minimum dust
     `,
 
     author: `Mason Scott`,
@@ -27,7 +27,7 @@ const reviews = [
     id: 3,
     rating: 5,
     content: `
-    Old valve was leaking past the valve and needed replacement before I did the dishwasher.  I called Katy Jetting and they took care of it within 2 hrs.  Cost was reasonable too, guys were polite.  What else can you ask for?
+    Old valve was leaking past the valve and needed replacement before I did the dishwasher.  I called Katys Plumbing Service and they took care of it within 2 hrs.  Cost was reasonable too, guys were polite.  What else can you ask for?
     `,
 
     author: `Isabella Garcia`,
@@ -38,7 +38,7 @@ const reviews = [
     id: 4,
     rating: 5,
     content: `
-    Working with Katy Jetting was great. They were on time, responsive and very helpful. In my particular case the City of Houston needed to be involved and Katy Jetting helped facilitate getting the city to react in the quickest manner possible. I would absolutely use Katy Jetting in the future for any plumbing needs.
+    Working with Katys Plumbing Service was great. They were on time, responsive and very helpful. In my particular case the City of Houston needed to be involved and Katys Plumbing Service helped facilitate getting the city to react in the quickest manner possible. I would absolutely use Katys Plumbing Service in the future for any plumbing needs.
     `,
 
     author: `Emily Nguyen`,
@@ -48,7 +48,7 @@ const reviews = [
     id: 5,
     rating: 5,
     content: `
-    Katy Jetting was great. Came at night because we had a leak in the upstairs bathroom. He came quickly, diagnosed the problem and fixed it quickly. He was also careful to keep things clean while walking  around the house and was very reasonable. I would highly recommend Katy Jetting.
+    Katys Plumbing Service was great. Came at night because we had a leak in the upstairs bathroom. He came quickly, diagnosed the problem and fixed it quickly. He was also careful to keep things clean while walking  around the house and was very reasonable. I would highly recommend Katys Plumbing Service.
     `,
     author: `Ethan Johnson`,
     avatarSrc: "/img/reviews/5.jpg",

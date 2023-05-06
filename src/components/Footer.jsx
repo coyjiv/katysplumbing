@@ -57,7 +57,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-5 text-whiteColor/60 font-display text-center text-sm leading-5 text-white">
-          &copy; 2023 Katy Jetting. All rights reserved.
+          &copy; 2023 Katys Plumbing Service. All rights reserved.
         </p>
       </div>
     </footer>

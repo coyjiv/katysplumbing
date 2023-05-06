@@ -72,7 +72,7 @@ export const HeroBanner = () => {
   });
   return (
     <section className="bg-[url('https://images.unsplash.com/photo-1538474705339-e87de81450e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] bg-fixed bg-cover py-40 min-h-[80vh] text-whiteColor">
-      <div className="inset-0 absolute z-0 w-full h-[1000px] bg-onyx opacity-20"></div>
+      <div className="inset-0 absolute z-0 w-full min-h-[150vh] bg-onyx opacity-20"></div>
       <div className="flex justify-between">
         <div className="container mx-auto px-4 lg:px-20 relative z-10">
           <animated.h1
@@ -85,36 +85,33 @@ export const HeroBanner = () => {
             className="text-2xl mb-12 font-display font-medium"
             style={props1}
           >
-            Choose Katy Plumbing!
+            Choose Katys Plumbing Service!
           </animated.p>
-          <animated.a
-            href="#"
-            className="block  drop-shadow-md shadow-lg w-fit border font-display  text-white hover:text-bg px-8 py-4 rounded-full uppercase tracking-wider font-bold hover:bg-gray-100 transition duration-300"
+          <animated.p
+            className="cursor-pointer  drop-shadow-md shadow-lg w-fit border font-display  text-white hover:text-bg px-8 py-4 rounded-full uppercase tracking-wider font-bold hover:bg-gray-100 transition duration-300"
             style={props2}
           >
-            <li className="list-none hover:text-bg">
+            {/* <li className="list-none hover:text-bg"> */}
               <Link smooth={true} duration={500} offset={-50} to="form1">
                 Schedule Service
               </Link>
-            </li>
-          </animated.a>
-          <animated.a
-            href="#"
-            className=" drop-shadow-md shadow-lg mt-5 block w-fit border font-display  text-white hover:text-bg px-8 py-4 rounded-full uppercase tracking-wider font-bold hover:bg-gray-100 transition duration-300"
+            {/* </li> */}
+          </animated.p>
+          <animated.p
+            className=" drop-shadow-md shadow-lg mt-5 cursor-pointer w-fit border font-display  text-white hover:text-bg px-8 py-4 rounded-full uppercase tracking-wider font-bold hover:bg-gray-100 transition duration-300"
             style={props3}
           >
-            <li className="list-none hover:text-bg">
+            {/* <li className="list-none hover:text-bg"> */}
               <Link smooth={true} duration={500} offset={-50} to="about-us">
                 About Us
               </Link>
-            </li>
-          </animated.a>
+            {/* </li> */}
+          </animated.p>
         </div>
         <form
           ref={form}
           onSubmit={formik.handleSubmit}
           className="hidden lg:flex justify-between lg:items-end items-center lg:justify-center lg:gap-6 lg:px-10 flex-col w-full lg:w-1/2 z-10 bg-gray-500/80 rounded-2xl pb-7 mr-20 shadow-2xl"
-          id="apply-form"
         >
           {/* // first name */}
           <h1 className="hidden lg:block text-center mt-10 mx-auto text-white text-3xl mb-10 lg:text-5xl font-bold lg:mb-10 drop-shadow-md">
@@ -124,7 +121,7 @@ export const HeroBanner = () => {
           <div className="first-row lg:flex justify-between  gap-4 w-4/5 lg:w-full">
             <div className="rounded-md px-3 pt-2.5 pb-1.5 mb-4 lg:mb-0 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-ultraViolet lg:w-1/2">
               <label
-                htmlFor="name"
+                htmlFor="name1"
                 className="block text-xs font-medium text-darkBrown-100"
               >
                 First Name *
@@ -136,7 +133,7 @@ export const HeroBanner = () => {
                 value={formik.values.firstName}
                 type="text"
                 name="firstName"
-                id="name"
+                id="name1"
                 className="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                 placeholder="Alex"
               />
@@ -150,7 +147,7 @@ export const HeroBanner = () => {
 
             <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-ultraViolet  lg:w-1/2 mb-4 lg:mb-0">
               <label
-                htmlFor="surname"
+                htmlFor="surname1"
                 className="block text-xs font-medium text-darkBrown-100"
               >
                 Last Name *
@@ -162,7 +159,7 @@ export const HeroBanner = () => {
                 type="text"
                 name="lastName"
                 value={formik.values.lastName}
-                id="surname"
+                id="surname1"
                 className="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                 placeholder="Brown"
               />
@@ -178,7 +175,7 @@ export const HeroBanner = () => {
 
           <div className=" rounded-md px-3 pt-2.5 pb-1.5 mb-4 lg:mb-0 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-ultraViolet lg:mt-4 w-4/5 lg:w-full  ">
             <label
-              htmlFor="email"
+              htmlFor="email1"
               className="block text-xs font-medium text-darkBrown-100"
             >
               Email *
@@ -189,7 +186,7 @@ export const HeroBanner = () => {
                 onChange={(e) => formik.setFieldValue("email", e.target.value)}
                 type="email"
                 name="email"
-                id="email"
+                id="email1"
                 value={formik.values.email}
                 className=" block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                 placeholder="alexbrown@example.com"
@@ -205,7 +202,7 @@ export const HeroBanner = () => {
           {/* phone number */}
           <div className=" rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-ultraViolet lg:mt-4 w-4/5 lg:w-full  ">
             <label
-              htmlFor="phone"
+              htmlFor="phone1"
               className="block text-xs font-medium text-darkBrown-100"
             >
               Phone number *
@@ -217,7 +214,7 @@ export const HeroBanner = () => {
                 value={formik.values.phone}
                 type="text"
                 name="phone"
-                id="phone"
+                id="phone1"
                 className="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                 placeholder="1XXX-XXX-XXXX"
               />
@@ -231,7 +228,7 @@ export const HeroBanner = () => {
           {/* additional info */}
           <div className=" rounded-md px-3 mt-4 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-ultraViolet lg:mt-4 w-4/5 lg:w-full  ">
             <label
-              htmlFor="message"
+              htmlFor="message1"
               className="block text-xs font-medium text-darkBrown-100"
             >
               Additional information
@@ -245,7 +242,7 @@ export const HeroBanner = () => {
                 value={formik.values.message}
                 type="text"
                 name="message"
-                id="message"
+                id="message1"
                 className=" block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                 placeholder="Leave your message here "
               />

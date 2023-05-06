@@ -6,12 +6,12 @@ import NavLink from "./NavLink/NavLink";
 export const Navigation = () => {
   return (
     <nav className="navigation fixed top-0 w-full  z-40">
-      <div className="navigation__wrapper h-20 md:h-20 flex justify-between sm:gap-8 lg:gap-2 flex-wrap items-center  flex-row lg:h-20 px-10  bg-bg">
+      <div className="navigation__wrapper py-2 md:py-0 md:h-20 flex justify-between sm:gap-8 lg:gap-2 flex-wrap items-center  flex-row lg:h-20 px-5 md:px-10  bg-bg">
         <div className="navigation__logo w-40  lg:mr-48 flex items-center">
           <a className="navigation__logo link">
-            <div className="w-48 h-14 flex justify-evenly items-center drop-shadow-lg bg-brightViolet bg-opacity-60 rounded-md">
-              <h1 className="font-bold font-[Corbel] text-xl text-whiteColor">
-                Katy Jetting
+            <div className=" p-[2px] lg:px-2 h-9 max-w-[2.25rem] lg:max-w-[3.5rem] lg:h-14 flex justify-evenly items-center drop-shadow-lg bg-brightViolet bg-opacity-60 rounded-full">
+              <h1 className="sr-only font-bold font-sans text-2xl text-whiteColor">
+                Kattys Plumbing Service
               </h1>
               <picture>
                 <source
@@ -22,7 +22,7 @@ export const Navigation = () => {
                 <img
                   src="/img/logo.webp"
                   className="w-11 h-auto shadow-2xl"
-                  alt="Katty Jetting logo"
+                  alt="Katys Plumbing Service logo"
                 />
               </picture>
             </div>

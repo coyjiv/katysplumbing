@@ -48,7 +48,7 @@ export default function AboutUs() {
             About Us
           </h2>
           <p className="mt-6  text-base leading-7 text-gray-300">
-            At Katy Jetting, we understand the importance of having a reliable
+            At Katys Plumbing Service, we understand the importance of having a reliable
             plumbing system in your home. That&apos;s why we provide a range of
             services to meet your needs, from fixing leaky faucets to installing
             new water heaters. Our team of expert plumbers is highly skilled and
